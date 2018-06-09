@@ -11,3 +11,6 @@ datamodel: datamodel.graphql
 secret: mysecret123
 #cluster: public-cypresslightning-206/prisma-us1
 endpoint: https://us1.prisma.sh/public-cypresslightning-206/hackernews-node/dev
+hooks:
+  post-deploy:
+    - graphql get-schema -p database
